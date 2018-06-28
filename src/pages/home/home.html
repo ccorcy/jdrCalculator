@@ -1,17 +1,56 @@
 <ion-header>
   <ion-navbar>
-    <ion-title>Home</ion-title>
+    <ion-title>JdrCalculator</ion-title>
   </ion-navbar>
 </ion-header>
 
 <ion-content padding>
-  <h2>Welcome to Ionic!</h2>
-  <p>
-    This starter project comes with simple tabs-based layout for apps
-    that are going to primarily use a Tabbed UI.
-  </p>
-  <p>
-    Take a look at the <code>src/pages/</code> directory to add or change tabs,
-    update any existing page or create new pages.
-  </p>
+  <ion-item>
+    <ion-label>Personnage</ion-label>
+    <ion-select [(ngModel)]="personnage">
+      <ion-option *ngFor="let l of liste" value="{{l}}">{{l}}</ion-option>
+    </ion-select>
+  </ion-item>
+  <button *ngIf="personnage" ion-button color="light" (click)="load()" block>Charger</button>
+  <h2>Fiche personnage</h2>
+  <div>
+    <ion-item>
+        <ion-label floating>Nom du personnage</ion-label>
+        <ion-input type="text" value="" [(ngModel)]="name"></ion-input>
+    </ion-item>
+    <ion-item>
+        <ion-label floating>Niveau</ion-label>
+        <ion-input type="number" value="" [(ngModel)]="level"></ion-input>
+    </ion-item>
+    <h3>Attributs principaux</h3>
+    <ion-row>
+      <ion-col col-12>
+        <ion-item>
+            <ion-label floating>Santé</ion-label>
+            <ion-input type="number" value="" [(ngModel)]="hp"></ion-input>
+        </ion-item>
+        <ion-item>
+            <ion-label floating>Énergie</ion-label>
+            <ion-input type="number" value="" [(ngModel)]="mana"></ion-input>
+        </ion-item>
+        <ion-item>
+            <ion-label floating>Puissance équipement</ion-label>
+            <ion-input type="number" value="" [(ngModel)]="pe"></ion-input>
+        </ion-item>
+        <ion-item>
+            <ion-label floating>Force</ion-label>
+            <ion-input type="number" value="" [(ngModel)]="strength"></ion-input>
+        </ion-item>
+        <ion-item>
+            <ion-label floating>Agilité</ion-label>
+            <ion-input type="number" value="" [(ngModel)]="agility"></ion-input>
+        </ion-item>
+        <ion-item>
+            <ion-label floating>Intelligence</ion-label>
+            <ion-input type="number" value="" [(ngModel)]="intel"></ion-input>
+        </ion-item>
+      </ion-col>
+    </ion-row>
+    <button ion-button (click)="save()" block>Sauvegarder</button>
+  </div>
 </ion-content>
