@@ -1,0 +1,8 @@
+{
+  "name": "jdrCalculator",
+  "app_id": "d62d7d75",
+  "type": "ionic-angular",
+  "integrations": {
+    "cordova": {}
+  }
+}
