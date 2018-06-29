@@ -5,10 +5,10 @@ import _ from "lodash";
 import { CacheServiceProvider } from '../../providers/cache-service/cache-service';
 
 @Component({
-  selector: 'page-about',
-  templateUrl: 'about.html'
+  selector: 'page-grimoire',
+  templateUrl: 'grimoire.html'
 })
-export class AboutPage {
+export class GrimoirePage {
   public spells: any[];
   constructor(public navCtrl: NavController, public spellService: SpellServiceProvider, public alertCtrl: AlertController, public cacheCtrl: CacheServiceProvider) {
     this.loadList();
@@ -31,7 +31,7 @@ export class AboutPage {
     this.cacheCtrl.getItem("currentPerso").then((p: any) => {
       this.spells = this.spellService.getSpells();
       this.spells = _.filter(this.spells, (s) => {
-        return s.minLevel <= p.level;
+        return (s.minLevel <= p.level) && (s.class === p.classe);
       });
     });
   }

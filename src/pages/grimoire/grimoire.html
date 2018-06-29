@@ -8,6 +8,7 @@
 
 <ion-content>
   <div class="spell" *ngFor="let spell of spells" (click)="getDamage(spell.id)" [style.backgroundColor]="spell.bgColor" [style.color]="spell.textColor">
-    <h1 class="name">{{spell.name}}</h1>
+    <h3 class="name">{{spell.name}}</h3>
+    <span class="level">Niveau : {{spell.minLevel}}</span>
   </div>
 </ion-content>

@@ -110,6 +110,17 @@ export class SpellServiceProvider {
       compute: (perso: any) => {
         return 6 + (perso.level * 2) + (perso.strength * 0) + (perso.agility * 4) + (perso.intel * 0) + (perso.pe * 0.4)
       }
+    },
+    {
+      id: 9,
+      class: "cannonier",
+      minLevel: 0,
+      name: 'Coup de feu',
+      bgColor: '#932222',
+      textColor: 'white',
+      compute: (perso: any) => {
+        return 6 + (perso.level * 2) + (perso.strength * 0) + (perso.agility * 4) + (perso.intel * 0) + (perso.pe * 0.4)
+      }
     }
   ]
   constructor(public cacheCtrl: CacheServiceProvider) {

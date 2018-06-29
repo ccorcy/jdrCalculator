@@ -3,9 +3,9 @@ import { BrowserModule } from '@angular/platform-browser';
 import { IonicApp, IonicModule, IonicErrorHandler } from 'ionic-angular';
 import { MyApp } from './app.component';
 
-import { AboutPage } from '../pages/about/about';
+import { GrimoirePage } from '../pages/grimoire/grimoire';
 import { ContactPage } from '../pages/contact/contact';
-import { HomePage } from '../pages/home/home';
+import { PersonnagePage } from '../pages/personnage/personnage';
 import { TabsPage } from '../pages/tabs/tabs';
 
 import { StatusBar } from '@ionic-native/status-bar';
@@ -16,9 +16,9 @@ import { CacheServiceProvider } from '../providers/cache-service/cache-service';
 @NgModule({
   declarations: [
     MyApp,
-    AboutPage,
+    GrimoirePage,
     ContactPage,
-    HomePage,
+    PersonnagePage,
     TabsPage
   ],
   imports: [
@@ -28,9 +28,9 @@ import { CacheServiceProvider } from '../providers/cache-service/cache-service';
   bootstrap: [IonicApp],
   entryComponents: [
     MyApp,
-    AboutPage,
+    GrimoirePage,
     ContactPage,
-    HomePage,
+    PersonnagePage,
     TabsPage
   ],
   providers: [

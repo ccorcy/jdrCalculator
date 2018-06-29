@@ -22,6 +22,14 @@
         <ion-label floating>Niveau</ion-label>
         <ion-input type="number" value="" [(ngModel)]="level"></ion-input>
     </ion-item>
+    <ion-item>
+      <ion-label>Classe</ion-label>
+      <ion-select [(ngModel)]="classe">
+        <ion-option value="primeHunter">Chasseur de Prime</ion-option>
+        <ion-option value="cannonier">Cannonier</ion-option>
+        <ion-option value="chinese">Chinois</ion-option>
+      </ion-select>
+    </ion-item>
     <h3>Attributs principaux</h3>
     <ion-row>
       <ion-col col-12>

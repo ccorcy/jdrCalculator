@@ -1,13 +1,12 @@
 import { Component } from '@angular/core';
 import { NavController } from 'ionic-angular';
 import { CacheServiceProvider } from '../../providers/cache-service/cache-service';
-import _ from "lodash";
 
 @Component({
-  selector: 'page-home',
-  templateUrl: 'home.html'
+  selector: 'page-personnage',
+  templateUrl: 'personnage.html'
 })
-export class HomePage {
+export class PersonnagePage {
   public liste: any[];
   public personnage: any;
   public name: any;
@@ -18,6 +17,7 @@ export class HomePage {
   public strength: number;
   public agility: number;
   public intel: number;
+  public classe: string;
   constructor(public navCtrl: NavController, public cacheCtrl: CacheServiceProvider) {
     this.cacheCtrl.getItem("liste").then((liste: any) => {
       console.log(liste);
@@ -32,6 +32,7 @@ export class HomePage {
       this.strength = p.strength;
       this.agility = p.agility;
       this.intel = p.intel;
+      this.classe = p.classe;
     })
   }
 
@@ -47,6 +48,7 @@ export class HomePage {
       this.strength = stats.strength;
       this.agility = stats.agility;
       this.intel = stats.intel;
+      this.classe = stats.classe;
       this.cacheCtrl.setItem("currentPerso", stats);
     });
   }
@@ -60,7 +62,8 @@ export class HomePage {
       pe: this.pe,
       strength: this.strength,
       agility: this.agility,
-      intel: this.intel
+      intel: this.intel,
+      classe: this.classe
     }
     console.log(stats);
     this.cacheCtrl.setItem("currentPerso", stats);

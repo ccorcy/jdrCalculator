@@ -1,10 +1,11 @@
-page-about {
+page-grimoire {
 	padding: 0px !important;
 	.spell {
-		width: 100%;
+		width: 80%;
 		height: 80px;
 		display: inline-block;
-		box-shadow: 2px 5px 2px;
+		margin: 5px;
+		border-radius: 10px;
 		span {
 			display: block;
 			margin: 0 auto;
