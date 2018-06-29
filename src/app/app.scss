@@ -19,7 +19,26 @@ ion-app {
 	background-color: #35393F;
 }
 
-ion-content, ion-item, ion-navbar, ion-tabs, ion-header {
+ion-content, ion-item, ion-tabs {
 	color: white !important;
 	background-color: #35393F !important;
+}
+.toolbar-title-md, .toolbar-title-ios {
+	color: white !important;
+}
+.toolbar-background {
+	background-color: #444548 !important;
+	.toolbar-title-md {
+		color: white !important;
+	}
+	.title {
+		color: white !important;
+	}
+}
+
+.tabs-md, .tabbar {
+	background-color: rgb(77, 79, 82) !important;
+	.tab-button, .tab-button-icon {
+		color: white;
+	}
 }
