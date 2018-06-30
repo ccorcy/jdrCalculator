@@ -1,18 +1,17 @@
 <ion-header>
   <ion-navbar>
-    <ion-title>JdrCalculator</ion-title>
+    <ion-title>Fiche Personnage</ion-title>
   </ion-navbar>
 </ion-header>
 
 <ion-content padding>
   <ion-item>
-    <ion-label>Personnage</ion-label>
+    <ion-label>Charger un perso</ion-label>
     <ion-select [(ngModel)]="personnage">
       <ion-option *ngFor="let l of liste" value="{{l}}">{{l}}</ion-option>
     </ion-select>
   </ion-item>
   <button *ngIf="personnage" ion-button color="light" (click)="load()" block>Charger</button>
-  <h2>Fiche personnage</h2>
   <div>
     <ion-item>
         <ion-label floating>Nom du personnage</ion-label>
@@ -30,17 +29,22 @@
         <ion-option value="chinese">Chinois</ion-option>
       </ion-select>
     </ion-item>
-    <h3>Attributs principaux</h3>
     <ion-row>
-      <ion-col col-12>
+      <ion-col col-6>
         <ion-item>
             <ion-label floating>Santé</ion-label>
             <ion-input type="number" value="" [(ngModel)]="hp"></ion-input>
         </ion-item>
+      </ion-col>
+      <ion-col col-6>
         <ion-item>
             <ion-label floating>Énergie</ion-label>
             <ion-input type="number" value="" [(ngModel)]="mana"></ion-input>
         </ion-item>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col col-6>
         <ion-item>
             <ion-label floating>Puissance équipement</ion-label>
             <ion-input type="number" value="" [(ngModel)]="pe"></ion-input>
@@ -49,6 +53,8 @@
             <ion-label floating>Force</ion-label>
             <ion-input type="number" value="" [(ngModel)]="strength"></ion-input>
         </ion-item>
+      </ion-col>
+      <ion-col col-6>
         <ion-item>
             <ion-label floating>Agilité</ion-label>
             <ion-input type="number" value="" [(ngModel)]="agility"></ion-input>
