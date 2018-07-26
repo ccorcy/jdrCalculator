@@ -31,7 +31,7 @@ export class GrimoirePage {
     this.cacheCtrl.getItem("currentPerso").then((p: any) => {
       this.spells = this.spellService.getSpells();
       this.spells = _.filter(this.spells, (s) => {
-        return (s.minLevel <= p.level) && (s.class === p.classe);
+        return (s.minLevel <= p.level) && (s.class.split("|").indexOf(p.classe) != -1);
       });
     });
   }

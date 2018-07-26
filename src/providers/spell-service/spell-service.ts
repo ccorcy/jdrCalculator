@@ -37,7 +37,7 @@ export class SpellServiceProvider {
     {
       id: 2,
       class: "primeHunter",
-      minLevel: 5,
+      minLevel: 3,
       name: 'Rafale (U)',
       bgColor: '#254550',
       textColor: 'white',
@@ -115,11 +115,77 @@ export class SpellServiceProvider {
       id: 9,
       class: "cannonier",
       minLevel: 0,
-      name: 'Coup de feu',
+      name: 'Boulet de canon',
       bgColor: '#932222',
       textColor: 'white',
       compute: (perso: any) => {
-        return 6 + (perso.level * 2) + (perso.strength * 0) + (perso.agility * 4) + (perso.intel * 0) + (perso.pe * 0.4)
+        return 3 + (perso.level * 2) + (perso.strength * 2) + (perso.agility * 0) + (perso.intel * 0) + (perso.pe * 0.5)
+      }
+    },
+    {
+      id: 10,
+      class: "cannonier",
+      minLevel: 0,
+      name: 'Surchauffe',
+      bgColor: '#9322AF',
+      textColor: 'white',
+      compute: (perso: any) => {
+        return 70 + (perso.level * 0) + (perso.strength * -2.5) + (perso.agility * 0) + (perso.intel * -1) + (perso.pe * 0)
+      }
+    },
+    {
+      id: 11,
+      class: "cannonier",
+      minLevel: 3,
+      name: 'CHARRRRGGGEZZZ (U)',
+      bgColor: '#9712AF',
+      textColor: 'white',
+      compute: (perso: any) => {
+        return 20 + (perso.level * 3) + (perso.strength * 3) + (perso.agility * 0) + (perso.intel * 0) + (perso.pe * 0.4)
+      }
+    },
+    {
+      id: 12,
+      class: "soldat",
+      minLevel: 0,
+      name: 'Tir de barrage',
+      bgColor: '#9967AF',
+      textColor: 'white',
+      compute: (perso: any) => {
+        return 2 + (perso.level * 2) + (perso.strength * 0) + (perso.agility * 2) + (perso.intel * 0) + (perso.pe * 0.5)
+      }
+    },
+    {
+      id: 13,
+      class: "soldat",
+      minLevel: 0,
+      name: 'Champ symbiotique',
+      bgColor: '#5567AF',
+      textColor: 'white',
+      compute: (perso: any) => {
+        return 5 + (perso.level * 2) + (perso.strength * 0) + (perso.agility * 0) + (perso.intel * 2) + (perso.pe * 0.2)
+      }
+    },
+    {
+      id: 14,
+      class: "soldat",
+      minLevel: 0,
+      name: 'Rocket LX',
+      bgColor: '#55854F',
+      textColor: 'white',
+      compute: (perso: any) => {
+        return 10 + (perso.level * 5) + (perso.strength * 0) + (perso.agility * 3) + (perso.intel * 0) + (perso.pe * 0.4)
+      }
+    },
+    {
+      id: 15,
+      class: "soldat",
+      minLevel: 0,
+      name: 'Frappe Nucléaire',
+      bgColor: '#FF854F',
+      textColor: 'white',
+      compute: (perso: any) => {
+        return 20 + (perso.level * 4) + (perso.strength * 0) + (perso.agility * 3) + (perso.intel * 0) + (perso.pe * 0.4)
       }
     }
   ]
